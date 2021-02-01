@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="css/main.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book-Shop</title>
+</head>
+
+<body onload="onInit()">
+    <h1 class="title">Book Shop</h1>
+
+    <form class="myform" onsubmit="onAddBook(event)">
+        <div class="input-container">
+            <input type="text" placeholder="name" name="name" required />
+            <input type="number" placeholder="price" name="price" required />
+        </div>
+        <div class="btn-container">
+            <button>Add</button>
+        </div>
+        </div>
+    </form>
+    <div class="book-details hide">
+        <button onclick="onCloseModal()" class="close">✖ </button>
+        <div class="rate-container">
+        </div>
+        <h4 class="modal-info">Book name:</h4>
+        <p class="name"></p>
+        <h4 class="modal-info">Book info:</h4>
+        <p class="info"></p>
+        <h4 class="modal-info">Book image:</h4>
+        <img src="" class="bookImg"  width="40px" height="40px">
+    </div>
+
+    <div class="table-container">
+        <table class="table" border="2">
+            <thead>
+                <tr>
+                    <th onclick="onSetSort(0)">id</th>
+                    <th onclick="onSetSort(1)">Title</th>
+                    <th onclick="onSetSort(2)">Price</th>
+                    <th colspan="3">Actions</th>
+                </tr>
+            </thead>
+            <tbody class="bookData"></tbody>
+        </table>
+        <div class="pages-container"> 
+            <button onclick="changePage(-1)"class ="pages-btn back end"> << </button>
+            <button data-pageNum="0" onclick="changePage(0)"class ="pages-btn page" >1</button>
+            <button onclick="changePage(1)"class ="pages-btn forward " >>></button>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="js/storage-util-service.js"></script>
+    <script type="text/javascript" src="js/storage-service.js"></script>
+    <script type="text/javascript" src="js/bookshop-service.js"></script>
+    <script type="text/javascript" src="js/bookshop-controller.js"></script>
+</body>
+
+</html>

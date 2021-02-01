@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+}
+h1 {
+  color: #c46060;
+  font-family: 'Raleway', sans-serif;
+  font-size: 62px;
+  font-weight: 800;
+  line-height: 72px;
+  margin: 0 0 24px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.myform {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  text-align: center;
+  margin-left: 10px;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myform button {
+  margin-top: 10px;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.book-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 35vw;
+  height: 100vh;
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  color: rgb(255, 255, 24);
+  border: 1px solid gray;
+  background-color: rgb(19, 19, 16);
+  opacity: 0.8;
+}
+
+
+.book-details p {
+  display: flex;
+  opacity: 0.95;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  font-family: cursive ;
+}
+.rate-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  cursor: pointer;
+  background-color: #485048;
+  border: none;
+  color: white;
+  padding: 15px 15px;
+  text-align: center;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+
+.close{
+  left:2px;
+  top: 2px;
+  position: absolute;
+  opacity: 1;
+  background-color: rgb(250, 252, 255);
+  color:black;
+  border-radius:4px;
+  padding:9px;
+}
+
+.rate-container button {
+  margin: 5px;
+}
+
+.blue {
+  background-color: #2e3fdf; /* Green */
+}
+
+.orange {
+  background-color: #f37f32; /* Green */
+}
+
+.red {
+  background-color: #eb2020; /* Green */
+}
+
+.hide {
+  display: none;
+}
+
+.pages-btn {
+  border-radius: 3px;
+  border: 1px solid black;
+  background-color: white;
+  color: rgb(0, 85, 141);
+}
+
+.end {
+  background-color: lightgray;
+  color: gray;
+  cursor: not-allowed;
+}
+

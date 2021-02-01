@@ -1,4 +1,5 @@
 function onInit() {
+  _createBooks();
   renderBooks();
   console.log('on Init');
 }

@@ -2,22 +2,29 @@
 <html lang="en">
 
 <head>
+    
     <link rel="stylesheet" href="css/main.css" />
+    
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book-Shop</title>
 </head>
 
 <body onload="onInit()">
-    <h1 class="title">Book Shop</h1>
+    <h1  data-trans="title" class="title">Book Shop</h1>
 
     <form class="myform" onsubmit="onAddBook(event)">
         <div class="input-container">
-            <input type="text" placeholder="name" name="name" required />
-            <input type="number" placeholder="price" name="price" required />
+            <input data-trans="name-placeholder" type="text" placeholder="name" name="name" required />
+            <input data-trans="name-placeholder"  type="number" placeholder="price" name="price" required />
         </div>
         <div class="btn-container">
-            <button>Add</button>
+            <button data-trans="add" >Add</button>
+
+            <select class="select" onchange="onSetLang(this.value)">
+                <option value="en">English</option>
+                <option value="he">עברית</option>
+            </select>
         </div>
         </div>
     </form>
@@ -25,11 +32,11 @@
         <button onclick="onCloseModal()" class="close">✖ </button>
         <div class="rate-container">
         </div>
-        <h4 class="modal-info">Book name:</h4>
+        <h4 data-trans="modal-book-name" class="modal-info">Book name:</h4>
         <p class="name"></p>
-        <h4 class="modal-info">Book info:</h4>
+        <h4 data-trans="modal-book-info" class="modal-info">Book info:</h4>
         <p class="info"></p>
-        <h4 class="modal-info">Book image:</h4>
+        <h4  data-trans="modal-book-img" class="modal-info">Book image:</h4>
         <img src="" class="bookImg"  width="40px" height="40px">
     </div>
 
@@ -37,10 +44,10 @@
         <table class="table" border="2">
             <thead>
                 <tr>
-                    <th onclick="onSetSort(0)">id</th>
-                    <th onclick="onSetSort(1)">Title</th>
-                    <th onclick="onSetSort(2)">Price</th>
-                    <th colspan="3">Actions</th>
+                    <th data-trans="id" onclick="onSetSort(0)">id</th>
+                    <th data-trans="book-title" onclick="onSetSort(1)">Title</th>
+                    <th data-trans="price" onclick="onSetSort(2)">Price</th>
+                    <th data-trans="actions" colspan="3">Actions</th>
                 </tr>
             </thead>
             <tbody class="bookData"></tbody>
@@ -54,6 +61,7 @@
 
 
     <script type="text/javascript" src="js/storage-util-service.js"></script>
+    <script type="text/javascript" src="js/i18n-service.js"></script>
     <script type="text/javascript" src="js/storage-service.js"></script>
     <script type="text/javascript" src="js/bookshop-service.js"></script>
     <script type="text/javascript" src="js/bookshop-controller.js"></script>

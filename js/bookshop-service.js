@@ -4,7 +4,7 @@ const PAGE_SIZE = 5;
 var gSortBy = 1; // 1 = by name 2=by price
 var gId = 1;
 
-// _createBooks();
+// _createBooks(); i didnt call the function here only because problem in github pages !
 
 var gPageIdx = 0;
 var gBooks;

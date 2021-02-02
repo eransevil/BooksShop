@@ -1,5 +1,5 @@
 function onInit() {
-  _createBooks();
+  _createBooks(); //i call the function here only because problem in github pages !
   renderBooks();
   console.log('on Init');
 }
@@ -14,9 +14,9 @@ function renderBooks() {
               <td> ${book.id}</td>
               <td> ${book.name}</td>
               <td> ${book.price}</td>
-              <td> <button onclick="onRead('${book.id}')" class ="blue">Read</button> </td>
-              <td> <button onclick="onUpdateBook('${book.id}')" class ="orange">Update</button> </td>
-              <td> <button onclick="onRemoveBook('${book.id}')" class ="red">Delete</button> </td>
+              <td> <button data-trans="read" onclick="onRead('${book.id}')" class ="blue">Read</button> </td>
+              <td> <button data-trans="update" onclick="onUpdateBook('${book.id}')" class ="orange">Update</button> </td>
+              <td> <button data-trans="delete" onclick="onRemoveBook('${book.id}')" class ="red">Delete</button>  </td>
               </tr>
           `;
     })
@@ -98,4 +98,10 @@ function addStyleToBtn() {
     document.querySelector('.forward').classList.remove('end');
   }
   document.querySelector('.page').innerText = gPageIdx + 1;
+}
+
+function onSetLang(lang) {
+  setLang(lang);
+  renderBooks();
+  doTrans();
 }
